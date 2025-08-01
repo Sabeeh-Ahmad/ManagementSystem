@@ -39,7 +39,7 @@ while True:
     symptom = input("Enter the main symptom of the patient: ")
 
     assigned_doctor = doctors.get(symptom, "Dr. Hussain (General Physician)")
-
+    
     patient = (name, age, occupation, symptom, assigned_doctor)
     patients.append(patient)
     print(f"Patient {name} has been registered and assigned to {assigned_doctor}.")
@@ -54,7 +54,7 @@ while True:
         print()
 
   elif choice == "3":
-
+    
     search_key = input("Enter the name of the doctor or the symptom: ")
     found = False
     print("\n Search Results: ")
@@ -63,15 +63,15 @@ while True:
       if search_key in patient[4] or search_key in patient[3]:
         print(f"Name of the patient: {patient[0]} | Age of the patient: {patient[1]} | Occupation of the pateint: {patient[2]} | Symptom of the patient: {patient[3]} | The doctor assigned to the patient: {patient[4]}")
         found = True
-
+        
       if not found:
         print("No matching patients found \n")
       print()
-
+      
   elif choice == "4":
     name = input("Enter the name of the patient: ")
     found = False
-
+    
     for patient in patients:
       if patients[0] == name:
         found = True
@@ -90,7 +90,7 @@ while True:
           elif service_the_patient_wants in services:
             selected.append(service_the_patient_wants)
             total += services[service_the_patient_wants]
-
+            
           else:
             print("Invalid Input!")
 
@@ -117,6 +117,6 @@ while True:
   elif choice == "6":
     print("\n Thankyou for Visiting the Hospital! \n")
     break
-
+    
   else:
     print("Invalid Input!")
